@@ -1,0 +1,52 @@
+[
+    {
+      "Image": "https://media.getmyuni.com/assets/images/articles/70661025121047.jpg",
+      "Name": "Class 1",
+      "Instructor name": "Instructor 1",
+      "Available seats": 10,
+      "Price": 99.99,
+      "Students enrolled": 50
+    },
+    {
+      "Image": "https://howard.staffs.sch.uk/images/cropped-class-2.jpg",
+      "Name": "Class 2",
+      "Instructor name": "Instructor 2",
+      "Available seats": 5,
+      "Price": 79.99,
+      "Students enrolled": 45
+    },
+    {
+      "Image": "https://3.imimg.com/data3/BE/EC/MY-9771667/hostgator80279-image-1072150_483992645029081_2103415302_o-500x500.jpg",
+      "Name": "Calss 3",
+      "Instructor name": "Instructor 3",
+      "Available seats": 8,
+      "Price": 119.99,
+      "Students enrolled": 60
+    },
+    {
+      "Image": "https://img.cdn.schooljotter2.com/sampled/7384016/677/323/notbigger",
+      "Name": "Class 4",
+      "Instructor name": "Instructor 4",
+      "Available seats": 3,
+      "Price": 49.99,
+      "Students enrolled": 30
+    },
+    {
+      "Image": "https://rawmarshryecroftinfantschool.co.uk/_images/1216267_l.png",
+      "Name": "Class 5",
+      "Instructor name": "Instructor 5",
+      "Available seats": 12,
+      "Price": 149.99,
+      "Students enrolled": 75
+    },
+    {
+      "Image": "https://exclusive.multibriefs.com/images/exclusive/0219schoolart.jpg",
+      "Name": "Class 6",
+      "Instructor name": "Instructor 6",
+      "Available seats": 6,
+      "Price": 89.99,
+      "Students enrolled": 55
+    }
+    
+  ]
+  
