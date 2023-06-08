@@ -1,51 +1,51 @@
 [
     {
-      "Image": "https://media.getmyuni.com/assets/images/articles/70661025121047.jpg",
+      "Image": "https://s3-ap-southeast-2.amazonaws.com/artest-ish-oncourse/0354fb9b-cb1c-4906-8ce9-9ef6e07fbe18",
       "Name": "Class 1",
-      "Instructor name": "Instructor 1",
-      "Available seats": 10,
+      "InstructorName": "Instructor 1",
+      "AvailableSeats": 10,
       "Price": 99.99,
-      "Students enrolled": 50
+      "StudentsEnrolled": 50
     },
     {
-      "Image": "https://howard.staffs.sch.uk/images/cropped-class-2.jpg",
+      "Image": "https://cherrycourtstudios.b-cdn.net/wp-content/uploads/2018/10/supplemental-art-classes.jpg",
       "Name": "Class 2",
-      "Instructor name": "Instructor 2",
-      "Available seats": 5,
+      "InstructorName": "Instructor 2",
+      "AvailableSeats": 5,
       "Price": 79.99,
-      "Students enrolled": 45
+      "StudentsEnrolled": 45
     },
     {
-      "Image": "https://3.imimg.com/data3/BE/EC/MY-9771667/hostgator80279-image-1072150_483992645029081_2103415302_o-500x500.jpg",
+      "Image": "https://ednote.ecs.org/wp-content/uploads/Who-is-taking-art-classes.png",
       "Name": "Calss 3",
-      "Instructor name": "Instructor 3",
-      "Available seats": 8,
+      "InstructorName": "Instructor 3",
+      "AvailableSeats": 8,
       "Price": 119.99,
-      "Students enrolled": 60
+      "StudentsEnrolled": 60
     },
     {
-      "Image": "https://img.cdn.schooljotter2.com/sampled/7384016/677/323/notbigger",
+      "Image": "https://www.thesprucecrafts.com/thmb/rORk4zptd3qZlX28RAIR7rzW6wk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1147542801-ad3e219d734547049a72b970cc4c1bae.jpg",
       "Name": "Class 4",
-      "Instructor name": "Instructor 4",
-      "Available seats": 3,
+      "InstructorName": "Instructor 4",
+      "AvailableSeats": 3,
       "Price": 49.99,
-      "Students enrolled": 30
+      "StudentsEnrolled": 30
     },
     {
-      "Image": "https://rawmarshryecroftinfantschool.co.uk/_images/1216267_l.png",
+      "Image": "https://www.learningliftoff.com/wp-content/uploads/2016/02/How-Arts-in-Education-Impacts-Grades-730x390.jpg",
       "Name": "Class 5",
-      "Instructor name": "Instructor 5",
-      "Available seats": 12,
+      "InstructorName": "Instructor 5",
+      "AvailableSeats": 12,
       "Price": 149.99,
-      "Students enrolled": 75
+      "StudentsEnrolled": 75
     },
     {
-      "Image": "https://exclusive.multibriefs.com/images/exclusive/0219schoolart.jpg",
+      "Image": "https://www.littlestepsasia.com/wp-content/uploads/2019/12/Caramelle-Craft-Class-Jakarta.jpg",
       "Name": "Class 6",
-      "Instructor name": "Instructor 6",
-      "Available seats": 6,
+      "InstructorName": "Instructor 6",
+      "AvailableSeats": 6,
       "Price": 89.99,
-      "Students enrolled": 55
+      "StudentsEnrolled": 55
     }
     
   ]
