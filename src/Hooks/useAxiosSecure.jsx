@@ -29,7 +29,7 @@ const useAxiosSecure = () => {
           return Promise.reject(error);
         }
       );
-    }, [navigate, axiosSecure]); 
+    }, [navigate]); 
   
     return [axiosSecure];
 };

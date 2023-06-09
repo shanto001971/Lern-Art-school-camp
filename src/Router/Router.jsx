@@ -5,6 +5,7 @@ import Dashboard from "../Components/Dashboard/Dashboard";
 import SelectedClasses from "../Components/Dashboard/SelectedClasses/SelectedClasses";
 import Login from "../Components/Login/Login";
 import SingUp from "../Components/SingUp/SingUp";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -27,7 +28,7 @@ export const router = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <Dashboard/>,
+        element: <PrivateRoute><Dashboard/></PrivateRoute>,
         children:[
             {
                 path:'selectedClasses',
