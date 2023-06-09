@@ -7,6 +7,10 @@ import {
 import { router } from './router/Router';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import AuthProvider from './AuthProvider/AuthProvider';
+import 'sweetalert2/dist/sweetalert2.css';
+
+
+
 const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -4,12 +4,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 
 const ClassCard = ({ singleClass }) => {
+    // console.log(singleClass)
     const { user } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     const handelAddToClass = () => {
         if (user && user.email) {
-            const classItem = { ClassId: singleClass._id, email: user.email, price: singleClass.price, image: singleClass?.Image, name: singleClass?.Name }
+            const classItem = { ClassId: singleClass._id, email: user.email, price: singleClass.Price, image: singleClass?.Image, name: singleClass?.Name }
 
             fetch('http://localhost:5000/mySelectedClass', {
                 method: 'POST',
