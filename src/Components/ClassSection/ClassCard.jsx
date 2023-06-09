@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 
 const ClassCard = ({ singleClass }) => {
-    console.log(singleClass)
+    // console.log(singleClass)
     const { user } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
@@ -50,11 +50,11 @@ const ClassCard = ({ singleClass }) => {
         }
     }
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-full bg-base-100 shadow-xl">
             <figure><img src={singleClass?.Image} alt="Shoes" className="h-64" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-3xl font-sans">{singleClass?.Name}</h2>
-                <p className="text-2xl font-thin">Instructor Name: {singleClass?.InstructorName}</p>
+                <p className="text-2xl font-thin">Instructor: {singleClass?.InstructorName}</p>
                 <p className="text-lg">Available Seats: {singleClass?.AvailableSeats}</p>
                 <p className="text-lg">Price: ${singleClass?.Price}</p>
                 <div className="card-actions justify-center">

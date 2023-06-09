@@ -50,13 +50,13 @@ const AddClass = () => {
                     <label className="label">
                         <span className="label-text">Class Name name?</span>
                     </label>
-                    <input type="text" {...register("className")} placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                    <input type="text" {...register("className")} placeholder="Type here" className="input input-bordered w-full max-w-xs" required />
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Pick a Image</span>
                     </label>
-                    <input {...register("image")} type="file" className="file-input file-input-bordered w-full max-w-xs" />
+                    <input {...register("image")} type="file" className="file-input file-input-bordered w-full max-w-xs" required/>
                 </div>
             </div>
             <div className="lg:flex gap-3">
@@ -64,13 +64,13 @@ const AddClass = () => {
                     <label className="label">
                         <span className="label-text"> your name?</span>
                     </label>
-                    <input type="text" {...register("InstructorName")} placeholder="Type here" defaultValue={user.displayName} className="input input-bordered w-full max-w-xs" readOnly />
+                    <input type="text" {...register("InstructorName")} placeholder="Type here" defaultValue={user.displayName} className="input input-bordered w-full max-w-xs" readOnly required/>
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Your Email</span>
                     </label>
-                    <input type="text" {...register("InstructorEmail")} placeholder="Type here" defaultValue={user?.email} className="input input-bordered w-full max-w-xs" readOnly />
+                    <input type="text" {...register("InstructorEmail")} placeholder="Type here" defaultValue={user?.email} className="input input-bordered w-full max-w-xs" readOnly  required/>
                 </div>
             </div>
             <div className="lg:flex gap-3">
@@ -78,13 +78,13 @@ const AddClass = () => {
                     <label className="label">
                         <span className="label-text">Available seats</span>
                     </label>
-                    <input type="text" {...register("availableSeats")} placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                    <input type="text" {...register("availableSeats")} placeholder="Type here" className="input input-bordered w-full max-w-xs" required/>
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Price</span>
                     </label>
-                    <input type="text" {...register("price")} placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                    <input type="text" {...register("price")} placeholder="Type here" className="input input-bordered w-full max-w-xs" readOnly/>
                 </div>
 
             </div>

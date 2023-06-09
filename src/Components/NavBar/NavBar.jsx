@@ -5,7 +5,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const NavBar = () => {
     const {user,LogOutUser}=useContext(AuthContext);
-    console.log(user)
+    // console.log(user)
     const logOut =()=>{
         LogOutUser()
         .then((result)=>{
@@ -32,8 +32,9 @@ const NavBar = () => {
                            }
                         </ul>
                     </div>
-                    <div className="">
-                    <h1 className="btn btn-ghost normal-case text-xl">daisyUI</h1>
+                    <div className="flex items-center gap-2">
+                        <img src="https://www.pngkey.com/png/full/69-692033_art-craft-logo-arts-and-crafts-logo-png.png" alt="" className='w-16' />
+                    <h1 className="btn btn-ghost normal-case text-xl">Learn Art<span className='text-2xl font-thin'>&</span>craft</h1>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">

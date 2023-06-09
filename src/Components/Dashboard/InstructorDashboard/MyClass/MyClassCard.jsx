@@ -1,7 +1,7 @@
 
 
 const MyClassCard = ({ classItem }) => {
-    console.log(classItem)
+    // console.log(classItem)
     return (
         <tr>
                         
