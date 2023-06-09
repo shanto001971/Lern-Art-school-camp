@@ -1,48 +1,48 @@
 [
     {
       "Image": "https://s3-ap-southeast-2.amazonaws.com/artest-ish-oncourse/0354fb9b-cb1c-4906-8ce9-9ef6e07fbe18",
-      "Name": "Class 1",
-      "InstructorName": "Instructor 1",
+      "Name": "Arts",
+      "InstructorName": "Artthist Meraz",
       "AvailableSeats": 10,
       "Price": 99.99,
       "StudentsEnrolled": 50
     },
     {
       "Image": "https://cherrycourtstudios.b-cdn.net/wp-content/uploads/2018/10/supplemental-art-classes.jpg",
-      "Name": "Class 2",
-      "InstructorName": "Instructor 2",
+      "Name": "craft",
+      "InstructorName": "Abu thanha",
       "AvailableSeats": 5,
       "Price": 79.99,
       "StudentsEnrolled": 45
     },
     {
       "Image": "https://ednote.ecs.org/wp-content/uploads/Who-is-taking-art-classes.png",
-      "Name": "Calss 3",
-      "InstructorName": "Instructor 3",
+      "Name": "Art&craft",
+      "InstructorName": "Jon Thoms",
       "AvailableSeats": 8,
       "Price": 119.99,
       "StudentsEnrolled": 60
     },
     {
       "Image": "https://www.thesprucecrafts.com/thmb/rORk4zptd3qZlX28RAIR7rzW6wk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1147542801-ad3e219d734547049a72b970cc4c1bae.jpg",
-      "Name": "Class 4",
-      "InstructorName": "Instructor 4",
+      "Name": "Art Class",
+      "InstructorName": "MD Rasel",
       "AvailableSeats": 3,
       "Price": 49.99,
       "StudentsEnrolled": 30
     },
     {
       "Image": "https://www.learningliftoff.com/wp-content/uploads/2016/02/How-Arts-in-Education-Impacts-Grades-730x390.jpg",
-      "Name": "Class 5",
-      "InstructorName": "Instructor 5",
+      "Name": "craft",
+      "InstructorName": "MD Saddam",
       "AvailableSeats": 12,
       "Price": 149.99,
       "StudentsEnrolled": 75
     },
     {
       "Image": "https://www.littlestepsasia.com/wp-content/uploads/2019/12/Caramelle-Craft-Class-Jakarta.jpg",
-      "Name": "Class 6",
-      "InstructorName": "Instructor 6",
+      "Name": "Art&craft",
+      "InstructorName": "MD Muniem",
       "AvailableSeats": 6,
       "Price": 89.99,
       "StudentsEnrolled": 55
