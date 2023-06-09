@@ -3,6 +3,8 @@ import LayOut from "../LayOut/LayOut";
 import Home from "../Components/Home/Home";
 import Dashboard from "../Components/Dashboard/Dashboard";
 import SelectedClasses from "../Components/Dashboard/SelectedClasses/SelectedClasses";
+import Login from "../Components/Login/Login";
+import SingUp from "../Components/SingUp/SingUp";
 
 export const router = createBrowserRouter([
     {
@@ -15,7 +17,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'login',
-                element: <Home />
+                element: <Login/>
+            },
+            {
+                path: 'singUp',
+                element:<SingUp/>
             },
         ]
     },
