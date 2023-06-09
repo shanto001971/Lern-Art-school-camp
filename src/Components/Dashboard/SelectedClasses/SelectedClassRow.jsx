@@ -1,30 +1,60 @@
+import Swal from "sweetalert2";
 
 
-const SelectedClassRow = ({singleItem}) => {
-    console.log(singleItem)
+
+const SelectedClassRow = ({ singleItem, refetch }) => {
+    
+
+    const handelDelete = (id) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/mySelectedClass/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
+    }
+
     return (
         <tr>
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
-                        <div className="mask mask-squircle w-12 h-12">
-                            <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                        <div className="mask mask-squircle w-20 h-20">
+                            <img src={singleItem.image} alt="" className="" />
                         </div>
                     </div>
                     <div>
-                        <div className="font-bold">Hart Hagerty</div>
-                        <div className="text-sm opacity-50">United States</div>
+                        <div className="font-bold">{singleItem?.name}</div>
+
                     </div>
                 </div>
             </td>
             <td>
-                Zemlak, Daniel and Leannon
-                <br />
-                <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                InstructorName: {singleItem.InstructorName}
             </td>
-            <td>Purple</td>
+            <td>{singleItem.price}</td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button onClick={() => handelDelete(singleItem._id)} className="btn btn-ghost btn-xs">Remove</button>
             </th>
         </tr>
     );

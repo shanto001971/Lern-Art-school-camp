@@ -19,15 +19,15 @@ const SelectedClasses = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th></th>
+                            <th>Image</th>
+                            <th>InstructorName</th>
+                            <th>Price</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            ClassCart.map(singleItem=><SelectedClassRow key={singleItem._id} singleItem={singleItem}/>)
+                            ClassCart.map(singleItem=><SelectedClassRow key={singleItem._id} singleItem={singleItem} refetch={refetch} price={total}/>)
                         }
                     </tbody>
                 </table>

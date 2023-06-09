@@ -6,6 +6,9 @@ import SelectedClasses from "../Components/Dashboard/SelectedClasses/SelectedCla
 import Login from "../Components/Login/Login";
 import SingUp from "../Components/SingUp/SingUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Payment from "../Components/Payment/Payment";
+import AddClass from "../Components/Dashboard/InstructorDashboard/AddClass/AddClass";
+import MyClass from "../Components/Dashboard/InstructorDashboard/MyClass/MyClass";
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +36,18 @@ export const router = createBrowserRouter([
             {
                 path:'selectedClasses',
                 element:<SelectedClasses/>
+            },
+            {
+                path:'payment',
+                element:<Payment/>
+            },
+            {
+                path:'addClass',
+                element:<AddClass/>
+            },
+            {
+                path:'myClass',
+                element:<MyClass/>
             },
         ]
     },
