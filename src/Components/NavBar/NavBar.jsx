@@ -6,6 +6,7 @@ const NavBar = () => {
     <div className="lg:flex gap-4">
     <Link><li>Home</li></Link>
     <Link><li>Class</li></Link>
+    <Link to='/dashboard'><li>Dashboard</li></Link>
     </div>
     </>
     return (
@@ -31,7 +32,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link to='/login' className="btn">LogIn</Link>
                 </div>
             </div>
         </div>
