@@ -10,6 +10,7 @@ import Payment from "../Components/Payment/Payment";
 import AddClass from "../Components/Dashboard/InstructorDashboard/AddClass/AddClass";
 import MyClass from "../Components/Dashboard/InstructorDashboard/MyClass/MyClass";
 import ManageClass from "../Components/Dashboard/InstructorDashboard/ManageClass/ManageClass";
+import AdminManageUser from "../Components/Dashboard/AdminDashboard/AdminManageUser";
 
 export const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
             {
                 path:'manageClass',
                 element:<ManageClass/>
+            },
+            {
+                path:'manageUser',
+                element:<AdminManageUser/>
             },
         ]
     },

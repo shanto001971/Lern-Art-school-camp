@@ -20,7 +20,7 @@ const Dashboard = () => {
                         isAdmin && <>
                             <h1 className='text-2xl m-4'>Admin Dashboard</h1>
                             <li><NavLink to='/dashboard/manageClass'>Manage Classe</NavLink></li>
-                            <NavLink to='/dashboard/'><li>Manage Users</li></NavLink>
+                            <li><NavLink to='/dashboard/manageUser'>Manage Users</NavLink></li>
                             <li><a>Sidebar Item 2</a></li>
                         </>
                     }
