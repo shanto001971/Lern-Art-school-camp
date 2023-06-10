@@ -23,23 +23,21 @@ const SingUp = () => {
             .then(result => {
                 setUser(result.user)
                 console.log(result.user)
-                const user = { name: data.name, email: data.email }
+                const user = { name: data.name, email: data.email, role: 'students' }
                 updateProfileUser(data.name, data.photoUrl)
                     .then(() => {
                         axiosSecure.post('/user', user)
                             .then(res => {
-                                
-                                console.log(res.data)
 
-                                if (data.insertedId) {
-                                    
+                                if (res.data.insertedId) {
+
                                     Swal.fire(
                                         'Good job!',
                                         'SingIn Successfully',
                                         'success'
                                     )
                                 }
-                               navigate('/')
+                                navigate('/')
                             })
                     })
                     .catch(() => { })

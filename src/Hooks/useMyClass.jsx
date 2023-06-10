@@ -1,11 +1,13 @@
+import { useQuery } from "@tanstack/react-query";
 import useAuth from "./useAuth";
 import useAxiosSecure from "./useAxiosSecure";
-import { useQuery } from "react-query";
+
 
 
 const useMyClass = () => {
 
     const { user, loading } = useAuth();
+    
     const [axiosSecure] = useAxiosSecure();
 
     const { refetch, data: ClassCart = [] } = useQuery({

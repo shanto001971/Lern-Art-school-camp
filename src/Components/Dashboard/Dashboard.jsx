@@ -1,10 +1,17 @@
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import { FaWallet, FaHome } from 'react-icons/fa';
+import useAdmin from '../../Hooks/useAdmin';
+import useInstructor from '../../Hooks/useInstructor';
+import useStudents from '../../Hooks/useStudents';
 
 const Dashboard = () => {
-    const isAdmin = true;
-    const isInstructors = false;
-    const isStudents = false
+
+    const [isAdmin] = useAdmin();
+    const [Students] = useStudents()
+    const [instructors] = useInstructor()
+
+
+
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -17,15 +24,17 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
                     {
-                        isAdmin && <>
+                        isAdmin &&
+                        <>
+                            <li><Link to='/'><FaHome />Home</Link></li>
                             <h1 className='text-2xl m-4'>Admin Dashboard</h1>
                             <li><NavLink to='/dashboard/manageClass'>Manage Classe</NavLink></li>
                             <li><NavLink to='/dashboard/manageUser'>Manage Users</NavLink></li>
-                            <li><a>Sidebar Item 2</a></li>
+
                         </>
                     }
                     {
-                        isInstructors &&
+                        instructors &&
                         <>
                             <h1 className='text-2xl m-4'>Instructors Dashboard</h1>
                             <NavLink to='/dashboard/addClass' className=' px-5 py-2 bg-slate-400 rounded-lg mt-1 text-xl font-sans'><li>Add a Class</li></NavLink>
@@ -34,7 +43,7 @@ const Dashboard = () => {
                     }
 
                     {
-                        isStudents &&
+                        Students &&
                         <>
 
                             <h1 className='text-2xl m-4'>Students Dashboard</h1>

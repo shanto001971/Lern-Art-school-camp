@@ -5,7 +5,7 @@ import { FaRegWindowClose } from "react-icons/fa";
 
 
 const ManageClassCard = ({ singleCard }) => {
-    console.log(singleCard)
+    // console.log(singleCard)
     const [axiosSecure] = useAxiosSecure()
 
     const handelStatus = (status) => {
