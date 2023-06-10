@@ -17,12 +17,14 @@ const CheckOutForm = ({ ClassCart, price }) => {
     const [processing, setProcessing] = useState(false);
 
     useEffect(() => {
+       if (price > 0) {
         axiosSecure.post('/create-payment-intent', { price })
-            .then(res => {
-                console.log(res.data)
-                setClientSecret(res.data.clientSecret)
-            })
-    }, [])
+        .then(res => {
+            console.log(res.data)
+            setClientSecret(res.data.clientSecret)
+        })
+       }
+    }, [price,axiosSecure])
 
 
 
@@ -108,7 +110,7 @@ const CheckOutForm = ({ ClassCart, price }) => {
                         style: {
                             base: {
                                 fontSize: '16px',
-                               
+
                                 color: '#424770',
                                 '::placeholder': {
                                     color: '#aab7c4',

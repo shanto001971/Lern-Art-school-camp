@@ -2,8 +2,8 @@ import { Link, NavLink, Outlet } from 'react-router-dom';
 import { FaWallet, FaHome } from 'react-icons/fa';
 
 const Dashboard = () => {
-    const isAdmin = false;
-    const isInstructors = true;
+    const isAdmin = true;
+    const isInstructors = false;
     const isStudents = false
     return (
         <div className="drawer lg:drawer-open">
@@ -19,7 +19,7 @@ const Dashboard = () => {
                     {
                         isAdmin && <>
                             <h1 className='text-2xl m-4'>Admin Dashboard</h1>
-                            <li><NavLink to='/dashboard/'>Manage Classe</NavLink></li>
+                            <li><NavLink to='/dashboard/manageClass'>Manage Classe</NavLink></li>
                             <NavLink to='/dashboard/'><li>Manage Users</li></NavLink>
                             <li><a>Sidebar Item 2</a></li>
                         </>

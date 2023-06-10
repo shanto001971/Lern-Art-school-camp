@@ -9,6 +9,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Payment from "../Components/Payment/Payment";
 import AddClass from "../Components/Dashboard/InstructorDashboard/AddClass/AddClass";
 import MyClass from "../Components/Dashboard/InstructorDashboard/MyClass/MyClass";
+import ManageClass from "../Components/Dashboard/InstructorDashboard/ManageClass/ManageClass";
 
 export const router = createBrowserRouter([
     {
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
             {
                 path:'myClass',
                 element:<MyClass/>
+            },
+            {
+                path:'manageClass',
+                element:<ManageClass/>
             },
         ]
     },
