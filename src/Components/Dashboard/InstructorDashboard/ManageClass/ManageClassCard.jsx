@@ -16,25 +16,32 @@ const ManageClassCard = ({ singleCard }) => {
             })
     }
 
+    const handelFeedBack = (event) => {
+        event.preventDefault();
+        const from = event.target;
+        const feedback = from.feedback.value;
+        console.log(feedback)
+
+    }
 
 
     return (
         <div className="">
             <input type="checkbox" id="my_modal_6" className="modal-toggle" />
             <div className="modal">
-                <div className="modal-box">
+                <form onSubmit={handelFeedBack} className="modal-box">
                     <h3 className="font-bold text-lg">feedback</h3>
-                    <textarea className="textarea textarea-info w-full" placeholder="Bio"></textarea>
+                    <textarea className="textarea textarea-info w-full" name='feedback' placeholder="feedback"></textarea>
                     <div className="modal-action flex items-center">
                         <button>send feedback </button>
-                        <label htmlFor="my_modal_6" className="btn"><FaRegWindowClose/></label>
+                        <label htmlFor="my_modal_6" className="btn"><FaRegWindowClose /></label>
                     </div>
-                </div>
+                </form>
             </div>
 
 
             <div className="card w-full bg-base-100 shadow-xl">
-                <figure><img src={singleCard?.image} alt="Shoes" className="h-40 w-full"/></figure>
+                <figure><img src={singleCard?.image} alt="Shoes" className="h-40 w-full" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">className: {singleCard?.className}</h2>
                     <p>InstructorName: {singleCard?.InstructorName}</p>

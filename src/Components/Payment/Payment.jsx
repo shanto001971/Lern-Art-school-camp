@@ -7,14 +7,15 @@ import { loadStripe } from '@stripe/stripe-js';
 const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GETWAY);
 
 const Payment = () => {
-const [ClassCart]=useMyClass();
-const total = ClassCart.reduce((sum, item) => item.price + sum, 0)
+const [classCart]=useMyClass();
+console.log(classCart)
+const total = classCart.reduce((sum, item) => item.price + sum, 0)
 const price = parseFloat(total.toFixed(2));
    
     return (
         <div>
             <Elements stripe={stripePromise}>
-                <CheckOutForm cart={ClassCart} price={price}/>
+                <CheckOutForm classCart={classCart} price={price}/>
             </Elements>
         </div>
     );

@@ -6,8 +6,8 @@ import Swal from "sweetalert2";
 import './Style.css'
 
 
-const CheckOutForm = ({ ClassCart, price }) => {
-    // console.log(price)
+const CheckOutForm = ({ classCart, price }) => {
+    console.log(classCart)
     const { user } = useAuth();
     const stripe = useStripe();
     const elements = useElements();
@@ -67,7 +67,13 @@ const CheckOutForm = ({ ClassCart, price }) => {
             },
         );
 
-        console.log(paymentIntent)
+        if (paymentIntent) {
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+              )
+        }
         if (confirmError) {
             console.log(confirmError)
         }
@@ -79,9 +85,8 @@ const CheckOutForm = ({ ClassCart, price }) => {
                 transactionId: paymentIntent.id,
                 price,
                 date: new Date(),
-                quantity: ClassCart.length,
                 Status: 'service pending',
-                itemNames: ClassCart.map(item => item.name)
+                itemNames: classCart.map(item => item.name)
             }
 
             axiosSecure.post('/payments', payment)
