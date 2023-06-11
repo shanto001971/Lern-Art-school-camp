@@ -30,6 +30,7 @@ const MyClass = () => {
                                 <th>Class Name</th>
                                 <th>InstructorName</th>
                                 <th>Status</th>
+                                <th>Feedback</th>
                                 <th>Action</th>
                             </tr>
                         </thead>

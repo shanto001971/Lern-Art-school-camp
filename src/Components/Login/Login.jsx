@@ -9,19 +9,13 @@ import { useForm } from "react-hook-form";
 
 const Login = () => {
     const [hide, setHide] = useState(false);
-    const { register, handleSubmit, formState: { errors } } = useForm();
     const { singInUser, setUser } = useContext(AuthContext);
+    const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
     const location = useLocation();
     const froms = location.state?.from?.pathname || "/";
     const handelLogin = (event) => {
-       console.log(event)
-       
 
-        // const from = event.target;
-        // const email = from.email.value;
-        // const password = from.password.value;
-        // console.log(email, password)
         singInUser(event.email, event.password)
             .then(result => {
                 setUser(result.user);

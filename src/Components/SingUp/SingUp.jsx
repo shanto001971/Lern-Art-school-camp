@@ -48,6 +48,9 @@ const SingUp = () => {
     };
 
 
+    
+
+
     return (
         <div className="hero min-h-screen bg-base-200 ">
             <div className="hero-content flex-col ">
@@ -71,23 +74,17 @@ const SingUp = () => {
                         </div>
                         <div className="form-control">
 
-                            <input type="text" {...register("password", {
+                            <input type="password"  {...register("password", {
                                 required: true,
                                 minLength: 6,
-                                maxLength: 20,
-
-                            })}
-                                name="password" placeholder="password" className="input input-bordered" />
-                            {errors.password?.type === 'minLength' && <span>password mast be 6 characters</span>}
-                            {errors.password?.type === 'maxLength' && <span>password under be 20 characters</span>}
+                                pattern: /(?=.*[!@#$&*])(?=.*[0-6])(?=.*[A-Z])/
+                            })} placeholder="password" className="input input-bordered" />
+                            {errors.password?.type === 'required' && <p className="text-red-600">Password is required</p>}
+                            {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be 6 characters</p>}
+                            {errors.password?.type === 'pattern' && <p className="text-red-600">Password must contain at least one capital letter, one special character, and one number</p>}
                         </div>
                         <div className="form-control">
-                            <input type="text" {...register("password", {
-                                required: true,
-                                minLength: 6,
-                                maxLength: 20,
-
-                            })}
+                            <input type="password"  
                                 name="password" placeholder="Confirmpassword" className="input input-bordered" />
                             {errors.password?.type === 'minLength' && <span>password mast be 6 characters</span>}
                             {errors.password?.type === 'maxLength' && <span>password under be 20 characters</span>}

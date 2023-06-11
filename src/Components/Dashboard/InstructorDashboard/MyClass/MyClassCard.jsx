@@ -25,6 +25,7 @@ const MyClassCard = ({ classItem }) => {
             
         </td>
         <td className="btn btn-ghost btn-xs mt-5 text-red-400">{classItem.status}</td>
+        <small>{classItem?.feedback}</small>
         <th>
             <button className="btn btn-ghost btn-xs">Update</button>
         </th>

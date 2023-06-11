@@ -11,6 +11,8 @@ import AddClass from "../Components/Dashboard/InstructorDashboard/AddClass/AddCl
 import MyClass from "../Components/Dashboard/InstructorDashboard/MyClass/MyClass";
 import ManageClass from "../Components/Dashboard/InstructorDashboard/ManageClass/ManageClass";
 import AdminManageUser from "../Components/Dashboard/AdminDashboard/AdminManageUser";
+import InstructorPage from "../Components/InstructorPage/InstructorPage";
+import ClassSection from "../Components/ClassSection/ClassSection";
 
 export const router = createBrowserRouter([
     {
@@ -22,42 +24,50 @@ export const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: 'login',
-                element: <Login/>
+                path: '/login',
+                element: <Login />
+            },
+            {
+                path: '/class',
+                element: <ClassSection />
+            },
+            {
+                path: '/instructor',
+                element: <InstructorPage />
             },
             {
                 path: 'singUp',
-                element:<SingUp/>
+                element: <SingUp />
             },
         ]
     },
     {
         path: 'dashboard',
-        element: <PrivateRoute><Dashboard/></PrivateRoute>,
-        children:[
+        element: <PrivateRoute><Dashboard /></PrivateRoute>,
+        children: [
             {
-                path:'selectedClasses',
-                element:<SelectedClasses/>
+                path: 'selectedClasses',
+                element: <SelectedClasses />
             },
             {
-                path:'payment',
-                element:<Payment/>
+                path: 'payment',
+                element: <Payment />
             },
             {
-                path:'addClass',
-                element:<AddClass/>
+                path: 'addClass',
+                element: <AddClass />
             },
             {
-                path:'myClass',
-                element:<MyClass/>
+                path: 'myClass',
+                element: <MyClass />
             },
             {
-                path:'manageClass',
-                element:<ManageClass/>
+                path: 'manageClass',
+                element: <ManageClass />
             },
             {
-                path:'manageUser',
-                element:<AdminManageUser/>
+                path: 'manageUser',
+                element: <AdminManageUser />
             },
         ]
     },

@@ -8,7 +8,7 @@ const img_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN;
 const AddClass = () => {
     const [axiosSecure] = useAxiosSecure();
     const { user } = useAuth();
-    const { register, handleSubmit,reset } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const image_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
 
     const submit = (data) => {
@@ -26,7 +26,7 @@ const AddClass = () => {
                 if (Response.success) {
                     console.log(Response)
                     const imageURl = Response.data.display_url
-                    const newClassItem = { className: data?.className, image: imageURl,InstructorName:data.InstructorName, email:user.email,availableSeats:data.AvailableSeats,status:data.status,  price: parseFloat(data.price)}
+                    const newClassItem = { className: data?.className, image: imageURl, InstructorName: data.InstructorName, email: user.email, availableSeats: data.AvailableSeats, status: data.status, price: parseFloat(data.price) }
 
                     axiosSecure.post('/addClass', newClassItem)
                         .then(data => {
@@ -56,7 +56,7 @@ const AddClass = () => {
                     <label className="label">
                         <span className="label-text">Pick a Image</span>
                     </label>
-                    <input {...register("image")} type="file" className="file-input file-input-bordered w-full max-w-xs" required/>
+                    <input {...register("image")} type="file" className="file-input file-input-bordered w-full max-w-xs" required />
                 </div>
             </div>
             <div className="lg:flex gap-3">
@@ -64,13 +64,13 @@ const AddClass = () => {
                     <label className="label">
                         <span className="label-text"> your name?</span>
                     </label>
-                    <input type="text" {...register("InstructorName")} placeholder="Type here" defaultValue={user.displayName} className="input input-bordered w-full max-w-xs" readOnly required/>
+                    <input type="text" {...register("InstructorName")} placeholder="Type here" defaultValue={user.displayName} className="input input-bordered w-full max-w-xs" readOnly required />
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Your Email</span>
                     </label>
-                    <input type="text" {...register("InstructorEmail")} placeholder="Type here" defaultValue={user?.email} className="input input-bordered w-full max-w-xs" readOnly  required/>
+                    <input type="text" {...register("InstructorEmail")} placeholder="Type here" defaultValue={user?.email} className="input input-bordered w-full max-w-xs" readOnly required />
                 </div>
             </div>
             <div className="lg:flex gap-3">
@@ -78,13 +78,13 @@ const AddClass = () => {
                     <label className="label">
                         <span className="label-text">Available seats</span>
                     </label>
-                    <input type="text" {...register("availableSeats")} placeholder="Type here" className="input input-bordered w-full max-w-xs" required/>
+                    <input type="text" {...register("availableSeats")} placeholder="Type here" className="input input-bordered w-full max-w-xs" required />
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Price</span>
                     </label>
-                    <input type="text" {...register("price")} placeholder="Type here" className="input input-bordered w-full max-w-xs" readOnly/>
+                    <input type="text" {...register("price")} placeholder="Type here" className="input input-bordered w-full max-w-xs" required />
                 </div>
 
             </div>
