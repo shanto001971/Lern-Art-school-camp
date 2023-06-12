@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import useAuth from "../../Hooks/useAuth";
 
 
 const PaymentHistory = () => {
     const [axiosSecure] = useAxiosSecure()
     const [data, setData] = useState([])
+    const{user}=useAuth()
 
-    axiosSecure.get('/PaymentHistory')
-        .then(res => setData(res.data))
+    useEffect(() => {
+        if (!!user?.email && !!localStorage.getItem('access-token')) {
+            axiosSecure.get('/PaymentHistory')
+                .then(res => setData(res.data))
+        }
+
+
+    }, [axiosSecure, user?.email])
 
     return (
         <div>
@@ -25,7 +33,7 @@ const PaymentHistory = () => {
                     <tbody>
                         {
                             data.map((payData, i) => <tr key={payData._id}>
-                                <th>{i+1}</th>
+                                <th>{i + 1}</th>
                                 <td>Email : {payData.email}</td>
                                 <td>{payData.transactionId}</td>
                                 <td>Price: {payData.price}</td>

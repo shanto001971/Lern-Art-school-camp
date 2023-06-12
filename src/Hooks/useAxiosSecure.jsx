@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000', 
+  baseURL: 'https://summar-school-server-shanto001971.vercel.app', 
 });
 
 const useAxiosSecure = () => {
