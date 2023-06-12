@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import './Style.css'
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import { useRef } from 'react';
+import { FaAngleRight } from 'react-icons/fa';
 
 const BannerSlider = () => {
 
@@ -32,9 +33,11 @@ const BannerSlider = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         
-        className="mySwiper"
+        className="mySwiper relative"
       >
-        <SwiperSlide><img src="https://media.istockphoto.com/id/639999614/vector/fish-child-drawing.jpg?s=612x612&w=0&k=20&c=4wifhg5cOS1J7a-RJX2MVWc6bng8os7nCr9IKExk0Tg=" alt="" /></SwiperSlide>
+        <SwiperSlide><div className=" w-full" ><img className='w-full' src="https://media.istockphoto.com/id/639999614/vector/fish-child-drawing.jpg?s=612x612&w=0&k=20&c=4wifhg5cOS1J7a-RJX2MVWc6bng8os7nCr9IKExk0Tg=" alt="" />
+          
+        </div></SwiperSlide>
         <SwiperSlide><img src="https://www.kidsartncraft.com/wp-content/uploads/2022/04/Lovely-Engaging-And-Simple-Drawing-For-Kids.jpg" alt="" /></SwiperSlide>
         <SwiperSlide><img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Kids/Articles/Kid%24!e2%24!80%24!99s+Art/kids+art-carousel.jpg" alt="" /></SwiperSlide>
         <SwiperSlide><img src="https://empoweredparents.co/wp-content/uploads/2019/09/stages-of-drawing-3.jpg" alt="" /></SwiperSlide>
@@ -48,6 +51,11 @@ const BannerSlider = () => {
           </svg>
           <span ref={progressContent}></span>
         </div>
+        <div className=' absolute top-[20%] z-10 left-[15%] lg:left-[8%] '>
+            <h1 className='lg:text-5xl font-serif uppercase'>Welcome to <br /> Art & craft School</h1>
+            <p className=' lg:text-2xl lg:block hidden'>At Masterful Creations, we believe that everyone <br /> possesses a unique artistic voice waiting to be discovered.</p>
+            <button className='flex items-center gap-3'>Check Out <FaAngleRight/></button>
+          </div>
       </Swiper>
     </>
     );

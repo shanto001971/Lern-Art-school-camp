@@ -10,15 +10,16 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
+    const [btnToggle, setBtnToggle] = useState(true)
 
     const createUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    const singInUser=(email,password)=>{
+    const singInUser = (email, password) => {
         setLoading(true)
-        return signInWithEmailAndPassword(auth,email,password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     const googleLogin = () => {
@@ -44,11 +45,11 @@ const AuthProvider = ({ children }) => {
             setLoading(false)
             if (currentUser) {
                 axios.post('http://localhost:5000/jwt', { email: currentUser?.email })
-                .then(data => {
-                    localStorage.setItem('access-token',data?.data?.token);
-                    setLoading(false);
-                })
-            }else{
+                    .then(data => {
+                        localStorage.setItem('access-token', data?.data?.token);
+                        setLoading(false);
+                    })
+            } else {
                 localStorage.removeItem('access-token')
             }
         });
@@ -57,8 +58,8 @@ const AuthProvider = ({ children }) => {
         }
     }, []);
 
-    const authInfo ={
-        user, 
+    const authInfo = {
+        user,
         setUser,
         createUser,
         singInUser,
@@ -66,6 +67,8 @@ const AuthProvider = ({ children }) => {
         googleLogin,
         updateProfileUser,
         loading,
+        btnToggle, 
+        setBtnToggle
     }
     return (
         <AuthContext.Provider value={authInfo}>

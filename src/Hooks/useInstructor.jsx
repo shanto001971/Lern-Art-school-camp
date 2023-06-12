@@ -7,8 +7,10 @@ import { useEffect, useState } from "react";
 const useInstructor = () => {
     const [instructors, seInstructors] = useState()
     // console.log(instructors)
+  
     const { user } = useAuth();
     const [axiosSecure] = useAxiosSecure();
+    
     useEffect(() => {
         axiosSecure.get(`/users/instructors/${user?.email}`)
             .then(res => {

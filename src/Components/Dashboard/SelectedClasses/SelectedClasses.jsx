@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import useMyClass from "../../../Hooks/useMyClass";
 import SelectedClassRow from "./SelectedClassRow";
 
@@ -12,7 +12,6 @@ const SelectedClasses = () => {
             <div className="flex justify-around mb-4">
                 <h1>Total Items {ClassCart.length}</h1>
                 <h1>Total Price: ${total}</h1>
-                <Link to='/dashboard/payment'><button className="btn btn-primary btn-xs">Pay</button></Link>
             </div>
             <div className="overflow-x-auto">
                 <table className="table">

@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 
 const SelectedClassRow = ({ singleItem, refetch }) => {
-    
+
 
     const handelDelete = (id) => {
         Swal.fire({
@@ -53,7 +54,8 @@ const SelectedClassRow = ({ singleItem, refetch }) => {
                 InstructorName: {singleItem.InstructorName}
             </td>
             <td>{singleItem.price}</td>
-            <th>
+            <th className="flex gap-3">
+                <Link to='/dashboard/payment'><button className="btn btn-primary btn-xs">Pay</button></Link>
                 <button onClick={() => handelDelete(singleItem._id)} className="btn btn-ghost btn-xs">Remove</button>
             </th>
         </tr>

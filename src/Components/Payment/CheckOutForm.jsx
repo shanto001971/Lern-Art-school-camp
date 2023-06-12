@@ -7,7 +7,7 @@ import './Style.css'
 
 
 const CheckOutForm = ({ classCart, price }) => {
-    console.log(classCart)
+    // console.log(classCart)
     const { user } = useAuth();
     const stripe = useStripe();
     const elements = useElements();
