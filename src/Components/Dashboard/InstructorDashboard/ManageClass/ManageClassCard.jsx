@@ -80,7 +80,7 @@ const ManageClassCard = ({ singleCard, refetch}) => {
                     <div className=" flex justify-around gap-3">
                         <button onClick={() => handelStatus('Approve')} disabled={singleCard?.status == 'Approve' || singleCard?.status == 'denied'} className="btn btn-primary btn-xs"> Approve</button>
                         <button onClick={() => handelStatus('denied')} disabled={singleCard?.status == 'Approve' || singleCard?.status == 'denied'} className="btn btn-primary btn-xs">Deny</button>
-                        <label  disabled={singleCard.feedback} htmlFor="my_modal_6" className="btn btn-xs bg-green-300">feedback</label>
+                        <label  disabled={singleCard.feedback} htmlFor={`my_modal_${singleCard._id}`} className="btn btn-xs bg-green-300">feedback</label>
                     </div>
                 </div>
             </div>

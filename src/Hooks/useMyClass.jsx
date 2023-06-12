@@ -11,20 +11,22 @@ const useMyClass = () => {
     const [axiosSecure] = useAxiosSecure();
     const [classCart, setClassCart] = useState([])
 
-    // const { refetch, data: ClassCart = [] } = useQuery({
-    //     queryKey: ['carts', user?.email],
-    //     enabled: !loading,
+    const { refetch, data: ClassCart = [] } = useQuery({
+        queryKey: ['carts', user?.email],
+        enabled: !loading,
 
-    //     queryFn: async () => {
-    //         const res = await axiosSecure(`/mySelectedClass?email=${user?.email}`)
-    //         return res.data;
-    //     },
-    // })
+        queryFn: async () => {
+            const res = await axiosSecure(`/mySelectedClass?email=${user?.email}`)
+            return res.data;
+        },
+    })
 
-    useEffect(() => {
-        axiosSecure.get(`/mySelectedClass?email=${user?.email}`)
-            .then(res => setClassCart(res.data))
-    }, [axiosSecure, user.email])
+    // useEffect(() => {
+
+
+    //     axiosSecure.get(`/mySelectedClass?email=${user?.email}`)
+    //         .then(res => setClassCart(res.data))
+    // }, [axiosSecure, user.email])
 
 
 

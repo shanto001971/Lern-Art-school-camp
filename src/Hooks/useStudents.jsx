@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const useStudents = () => {
     const { user } = useAuth();
     const [axiosSecure] = useAxiosSecure();
-    const [Students, setStudents] = useState({})
+    const [Students, setStudents] = useState([])
     // use axios secure with react query
     // const { data: isStudents =[], isLoading} = useQuery({
     //     queryKey: ['isStudents', user?.email],
@@ -15,10 +15,15 @@ const useStudents = () => {
     //         return res.data.instructors;
     //     }
     // })
+
+
     useEffect(() => {
-        axiosSecure.get(`/users/students/${user?.email}`)
-            .then(res => setStudents(res.data.students))
-    }, [axiosSecure,user.email])
+
+        if (!!user?.email && !!localStorage.getItem('access-token')) {
+            axiosSecure.get(`/users/students/${user?.email}`)
+                .then(res => setStudents(res.data.students))
+        }
+    }, [axiosSecure, user.email])
     return [Students]
 };
 

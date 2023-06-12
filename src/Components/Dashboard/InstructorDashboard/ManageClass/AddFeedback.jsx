@@ -20,7 +20,7 @@ const AddFeedback = ({singleCard }) => {
                         'send feedback',
                         'success'
                     )
-                    refetch()
+                    // refetch()
                 }
 
             })
@@ -30,14 +30,14 @@ const AddFeedback = ({singleCard }) => {
     }
     return (
         <div>
-              <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+              <input type="checkbox" id={`my_modal_${singleCard._id}`} className="modal-toggle" />
             <div className="modal">
                 <form onSubmit={handleSubmit(handelFeedBack)} className="modal-box">
                     <h3 className="font-bold text-lg">feedback</h3>
                     <textarea className="textarea textarea-info w-full" {...register("feedback")} name='feedback' placeholder="feedback"></textarea>
                     <div className="modal-action flex items-center">
                         <button>send feedback </button>
-                        <label htmlFor="my_modal_6" className="btn"><FaRegWindowClose /></label>
+                        <label htmlFor={`my_modal_${singleCard._id}`} className="btn"><FaRegWindowClose /></label>
                     </div>
                 </form>
             </div>
