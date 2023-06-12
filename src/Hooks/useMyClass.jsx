@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "./useAuth";
 import useAxiosSecure from "./useAxiosSecure";
-import { useEffect, useState } from "react";
+
 
 
 
@@ -9,8 +9,6 @@ const useMyClass = () => {
 
     const { user, loading } = useAuth();
     const [axiosSecure] = useAxiosSecure();
-    const [classCart, setClassCart] = useState([])
-
     const { refetch, data: ClassCart = [] } = useQuery({
         queryKey: ['carts', user?.email],
         enabled: !loading,
@@ -30,7 +28,7 @@ const useMyClass = () => {
 
 
 
-    return [classCart]
+    return [ClassCart,refetch]
 };
 
 export default useMyClass;

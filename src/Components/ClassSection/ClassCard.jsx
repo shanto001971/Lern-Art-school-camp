@@ -21,7 +21,7 @@ const ClassCard = ({ singleClass }) => {
         if (user && user.email) {
             const classItem = { ClassId: Item._id, email: isUser.email, price: Item.Price, image: Item.Image, name: Item.Name, InstructorName: Item.InstructorName }
 
-            // fetch('http://localhost:5000/mySelectedClass', {
+            // fetch('https://summar-school-server-shanto001971.vercel.app/mySelectedClass', {
             //     method: 'POST',
             //     headers: {
             //         'content-type': 'application/json'

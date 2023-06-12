@@ -1,11 +1,15 @@
+
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+
+
 
 
 
 const SelectedClassRow = ({ singleItem, refetch }) => {
-
-
+    const [axiosSecure] = useAxiosSecure()
+    
     const handelDelete = (id) => {
         Swal.fire({
             title: 'Are you sure?',
@@ -17,20 +21,36 @@ const SelectedClassRow = ({ singleItem, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/mySelectedClass/${id}`, {
-                    method: 'DELETE'
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.deletedCount > 0) {
+                // fetch(`https://summar-school-server-shanto001971.vercel.app/mySelectedClass/${id}`, {
+                //     method: 'DELETE'
+                // })
+                //     .then(res => res.json())
+                //     .then(data => {
+                //         if (data.deletedCount > 0) {
+                //             refetch();
+                //             Swal.fire(
+                //                 'Deleted!',
+                //                 'Your file has been deleted.',
+                //                 'success'
+                //             )
+                //         }
+                //     })
+
+                axiosSecure.delete(`/mySelectedClass/${id}`)
+                    .then(res => {
+                        if (res.data.deletedCount > 0) {
                             refetch();
                             Swal.fire(
                                 'Deleted!',
                                 'Your file has been deleted.',
                                 'success'
                             )
+                            refetch()
                         }
                     })
+
+
+
             }
         })
     }

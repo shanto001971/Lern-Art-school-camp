@@ -10,6 +10,7 @@ const MyClass = () => {
     const [data, setData] = useState([])
     const { user } = useAuth()
     const [axiosSecure] = useAxiosSecure();
+    
     useEffect(() => {
         axiosSecure.get(`/myAddClass?email=${user?.email}`)
             .then(res => {
