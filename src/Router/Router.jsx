@@ -14,12 +14,13 @@ import AdminManageUser from "../Components/Dashboard/AdminDashboard/AdminManageU
 import InstructorPage from "../Components/InstructorPage/InstructorPage";
 import ClassSection from "../Components/ClassSection/ClassSection";
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
+import PaymentHistory from "../Components/PaymentHistory/PaymentHistory";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <LayOut />,
-        errorElement:<NotFoundPage/>,
+        errorElement: <NotFoundPage />,
         children: [
             {
                 path: '/',
@@ -46,7 +47,7 @@ export const router = createBrowserRouter([
     {
         path: 'dashboard',
         element: <PrivateRoute><Dashboard /></PrivateRoute>,
-        errorElement:<NotFoundPage/>,
+        errorElement: <NotFoundPage />,
         children: [
             {
                 path: 'selectedClasses',
@@ -54,8 +55,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'payment',
-
                 element: <Payment />
+            },
+            {
+                path: 'PaymentHistory',
+                element: <PaymentHistory />
             },
             {
                 path: 'addClass',
@@ -75,5 +79,5 @@ export const router = createBrowserRouter([
             },
         ]
     },
-    
+
 ]);

@@ -67,6 +67,8 @@ const CheckOutForm = ({ classCart, price }) => {
             },
         );
 
+        
+
         if (paymentIntent) {
             Swal.fire(
                 'Good job!',

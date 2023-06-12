@@ -53,7 +53,7 @@ const Dashboard = () => {
                             <Link to='/' className='px-5 py-2 bg-slate-400 rounded-lg mt-1 text-xl font-sans flex items-center gap-1' > <FaHome /><li>Home</li></Link>
                             <Link to='/dashboard/selectedClasses' className='px-5 py-2 bg-slate-400 rounded-lg mt-1 text-xl font-sans flex items-center gap-2' ><FaCheckCircle/>  <li>My Selected Classes</li></Link>
                             <NavLink to='/dashboard/' className='px-5 py-2 bg-slate-400 rounded-lg mt-1 text-xl font-sans flex items-center gap-2'><FaBook/> <li>My Enrolled Classes</li></NavLink>
-                            <NavLink to='/dashboard/' className='px-5 py-2 bg-slate-400 rounded-lg mt-1 text-xl font-sans flex items-center gap-2'><FaWallet/>  <li> Payment</li></NavLink>
+                            <NavLink to='/dashboard/PaymentHistory' className='px-5 py-2 bg-slate-400 rounded-lg mt-1 text-xl font-sans flex items-center gap-2'><FaWallet/>  <li> Payment History</li></NavLink>
                            
                         </>
                     }
