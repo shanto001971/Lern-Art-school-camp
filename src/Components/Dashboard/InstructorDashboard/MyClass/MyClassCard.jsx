@@ -1,6 +1,9 @@
 
 
 const MyClassCard = ({ classItem }) => {
+
+
+    
     // console.log(classItem)
     return (
         <tr>
@@ -24,8 +27,11 @@ const MyClassCard = ({ classItem }) => {
            }
             
         </td>
+        
         <td className="btn btn-ghost btn-xs mt-5 text-red-400">{classItem.status}</td>
-        <small>{classItem?.feedback}</small>
+        <td>
+            {classItem?.feedback}
+        </td>
         <th>
             <button className="btn btn-ghost btn-xs">Update</button>
         </th>

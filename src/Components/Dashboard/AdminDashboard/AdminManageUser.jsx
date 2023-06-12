@@ -10,7 +10,7 @@ const AdminManageUser = () => {
     //     const { data: classItem = [], isLoading: loading , refetch} = useQuery({
     //         queryKey: ['user'],
     //         queryFn: async () => {
-    //             const res = await fetch(`https://summar-school-server-shanto001971.vercel.app/user?email=${user.email}`)
+    //             const res = await fetch(`http://localhost:5000/user?email=${user.email}`)
     //             return res.json();
     //         }
 

@@ -21,7 +21,7 @@ const ManageClass = () => {
     // const { data: data, refetch } = useQuery({
     //     queryKey: ['data'],
     //     queryFn: async () => {
-    //         const res = await fetch(`https://summar-school-server-shanto001971.vercel.app/class`)
+    //         const res = await fetch(`http://localhost:5000/class`)
     //         const data = await res.json();
     //         setData(data);
     //         return data;

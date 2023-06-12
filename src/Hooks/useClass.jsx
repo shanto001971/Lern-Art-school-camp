@@ -8,7 +8,7 @@ export const useClass = () => {
     const { data: classData = [], isLoading: loading , refetch} = useQuery({
         queryKey: ['classData'],
         queryFn: async () => {
-            const res = await fetch('https://summar-school-server-shanto001971.vercel.app/class')
+            const res = await fetch('http://localhost:5000/class')
             return res.json();
         }
 

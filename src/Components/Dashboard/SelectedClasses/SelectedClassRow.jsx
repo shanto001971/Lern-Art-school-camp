@@ -21,7 +21,7 @@ const SelectedClassRow = ({ singleItem, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                // fetch(`https://summar-school-server-shanto001971.vercel.app/mySelectedClass/${id}`, {
+                // fetch(`http://localhost:5000/mySelectedClass/${id}`, {
                 //     method: 'DELETE'
                 // })
                 //     .then(res => res.json())

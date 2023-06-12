@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../../../Hooks/useAuth";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import MyClassCard from "./MyClassCard";
+import { useQuery } from "@tanstack/react-query";
 
 
 
@@ -10,7 +11,7 @@ const MyClass = () => {
     const [data, setData] = useState([])
     const { user } = useAuth()
     const [axiosSecure] = useAxiosSecure();
-    
+
     useEffect(() => {
         axiosSecure.get(`/myAddClass?email=${user?.email}`)
             .then(res => {
@@ -18,6 +19,11 @@ const MyClass = () => {
 
             })
     }, [axiosSecure, user.email])
+
+
+
+
+
 
     
     return (
@@ -37,7 +43,7 @@ const MyClass = () => {
                         </thead>
                         <tbody>
                             {
-                                data.map(classItem => <MyClassCard key={classItem._id} classItem={classItem} />)
+                                data.map(classItem => <MyClassCard key={classItem._id} classItem={classItem} refetch={refetch} />)
                             }
 
                         </tbody>
